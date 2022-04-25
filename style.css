@@ -1,0 +1,158 @@
+@font-face {
+  font-family: myRedHat;
+  src: url(RedHatMono-Light.ttf);
+}
+
+html, body {
+  margin: 1;
+  padding: 1;
+  background-color: rgb(254, 254, 254);
+  
+}
+
+canvas {
+  display: block;
+  
+}
+
+
+input.text {
+  font-family: verdana;
+  font-size: 15px;
+  width: 300px;
+  margin: 4 px;
+  left: 0px;
+  position: relative;
+}
+
+label{
+  margin: 4px;
+
+}
+
+textarea{
+  height:270px;
+  width: 300px;
+  left: 59px;
+  position: relative;
+
+}
+
+#submit-button{
+  background:rgb(254, 254, 254);
+  border: none;
+  font-family: myRedHat;
+  font-size: 18px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  /*box-shadow: 0 5px #666;*/
+}
+
+#submit-button:hover{
+  background-color: #fdd6f8; /* Green */
+  color: white;
+}
+
+#submit-button:active {
+  background-color: #98b9be;
+  box-shadow: 50px 50px #fdd6f8;
+  transform: translateY(10px);
+}
+
+
+
+/* --------------------- Title Div -----------------------------*/
+#titleDiv{
+  position:relative;
+  z-index: 20;
+}
+
+
+
+/*-----------Enter button----------------------------*/
+#enterButtonDiv{
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  position:relative;
+  z-index: 20;
+}
+
+#enter-button{
+  background:rgb(254, 254, 254);
+  border: none;
+  font-family: myRedHat;
+  font-size: 18px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  /*box-shadow: 0 5px #666;*/
+}
+
+#enter-button:hover{
+  background-color: #fdd6f8; /* Green */
+  color: white;
+}
+
+#enter-button:active {
+  background-color: #98b9be;
+  box-shadow: 50px 50px #fdd6f8;
+  transform: translateY(10px);
+}
+
+/* this doesnt do anything..*/
+#enter-button:after{
+  /*margin-top: -120%;*/
+  background-color: #000000;
+  /*transition: all 0.2s*/
+  display: none;
+}
+
+/* --------------------- Main Graphic Background -----------------------------*/
+
+#mainGraphicDiv{
+/* width and height will only matter if something
+  coming after it */
+  width: 10px;
+  height: 10px;
+  top:0px;
+  left: 0px;
+  position: absolute;
+  /* move to background*/
+  z-index: -1;
+}
+
+#main-graphic.fade{
+  opacity: 0;
+}
+#main-graphic.nofade{
+  opacity: 1;
+}
+
+/* --------------------- about paragraph Form -----------------------------*/
+#aboutDiv{
+  /* width and height will only matter if something
+    coming after it */
+    width: 40%;
+    float: right; 
+    color: rgb(254,254,254);
+    transition-duration: 0.9s;
+   
+  }
+
+
+
+/* --------------------- Contact Form -----------------------------*/
+#contactFormDiv{
+  /*display: 1.0;*/
+  position: absolute;
+  font-family: myRedHat;
+  top: 80px;
+  left: 10px;
+  width: 600px;
+  height: 400px;
+  color: rgb(254,254,254);
+  display: none;
+  transition-duration: 0.9s;
+  margin: 0;
+  
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>bliind</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.min.js"></script>
+
+    <!--<script src="libraries/p5.sound.min.js"></script>-->
+    <script src="libraries/p5.3D.js"></script>
+
+    
+  </head>
+
+  <body>
+    
+    <!-- Title - Just a humble paragraph element-->
+    <p id="titleDiv" style="font-family: myRedHat;"> bliind.net: a networked live performance research studio</p>
+    
+    <!-- this is the old button, now written into the sketch file
+    <button id="enter-button" >Enter</button>  
+    -->
+
+    <!-- putting this inside a div -->
+    <div id="enterButtonDiv" > </div>
+    
+     <!-- putting this inside a div -->
+    <div id="mainGraphicDiv" > </div>
+
+    <div id="aboutDiv" > 
+      <p style="font-family: myRedHat; text-align: right;">
+        we define "networked live performance" as any performance that uses the internet as a means of distribution, 
+        interaction, collaboration or as a source of material in real time during performance.<br>
+        <br>
+        fundamentally we are interested in __new models__ for live performance creation and distribution.<br>
+        <br>
+        if you would like to keep up to date with this project please fill out your contact details below and you'll get 
+        added to our mailing list.<br>
+      </p>
+    </div>
+
+   <div id="contactFormDiv" >
+    <form action="/action_page.php" style="position: 'relative'"> 
+      <label for="name"> Name_</label>
+      <input class="text" type="text" id="form_name" name="Name" placeholder="Your name.." >
+      <br>
+      <label for="email"> Email</label>
+      <input class="text" type="text" id="Email" name="Email" placeholder="Your email..">
+      <br>
+      <label for="message"></label>
+      <textarea id="message" name="message" placeholder="Write something.." style=""></textarea>
+      <br>
+      <input id="submit-button" type="submit" value="Submit">
+    </form>
+  </div>
+  <script src="bliind-sketch-5.js"></script>
+  </body>
+</html>
