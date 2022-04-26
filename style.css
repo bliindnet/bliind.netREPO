@@ -23,7 +23,7 @@ p.about{
 input.text {
   font-family: verdana;
   font-size: 15px;
-  width: 300px;
+  width: 50%;
   margin: 4 px;
   left: 0px;
   position: relative;
@@ -31,12 +31,13 @@ input.text {
 
 label{
   margin: 4px;
+  position: relative;
 
 }
 
 textarea{
   height:270px;
-  width: 300px;
+  width: 50%;
   left: 59px;
   position: relative;
 
@@ -149,11 +150,12 @@ textarea{
 /* --------------------- Contact Form -----------------------------*/
 #contactFormDiv{
   /*display: 1.0;*/
-  position: absolute;
+  position: relative;
   font-family: myRedHat;
-  top: 80px;
+  top: 210px;
   left: 10px;
-  width: 600px;
+  float: left;
+  width: 60%;
   height: 400px;
   color: rgb(254,254,254);
   display: none;
