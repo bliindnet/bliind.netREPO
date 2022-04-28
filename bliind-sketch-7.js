@@ -1,10 +1,3 @@
-
-/*let inconsolata, redHat;
-function preload(){
-  inconsolata = loadFont('Inconsolata-Medium.ttf');
-  redHat = loadFont('RedHatMono-Light.ttf');
-};*/
-
 // Sketch One
 /*
 var s = function( p ) { // p could be any variable name
@@ -135,7 +128,7 @@ var s = function( p ) { // p could be any variable name
 };
 var myp5 = new p5(s, 'mainGraphicDiv'); */
 
-// save this file as sketch.js
+
 // title graphic sketch
 var t = function( p ) { 
     var x = 0; 
@@ -144,27 +137,21 @@ var t = function( p ) {
     var speedy = 0.1;
     p.setup = function() {
       p.createCanvas(p.windowWidth, 50);
+      console.log(3%2)
+      //p.background(254,251,251);
+
       
     };
   
     p.draw = function() {
-        p.background(245,234,234);
-        
-        for (let i = 0; i < 200; i++) {
-            p.fill(1);
-            x += speedx + (i* 2.2) * p.random(2);
-            y += speedy + (i* 2.2) * p.random(2); 
-            if(x > p.width){
-                x = 1; 
+        p.background(254,250,250);
+        var time = p.millis();
+        var rate = time%8;
+        //console.log(rate)
+        if (rate == 0 || rate == 1){
+            for (let i = 0; i < 50; i++) {
+               p.circle(p.random(p.windowWidth),p.random(50),1,1);
             }
-            if(y > p.height){
-                y = 1; 
-            }
-
-        //p.ellipse(x,y,50,50);
-            p.circle (x,y,1,1)
-            //console.log(p.random(10))
-        //p.circle (x+10,y+10,2,2)
         }
 
           
@@ -174,7 +161,7 @@ var t = function( p ) {
 
 
 
-// Sketch Two
+// Main graphic sketch 
 var t = function( p ) { 
     var x = 100.0; 
     var y = 100; 
@@ -210,7 +197,7 @@ var t = function( p ) {
         // create your canvas
         myCanvas = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
         
-        bgcolor = p.color (254,254,254);
+        bgcolor = p.color (254,250,250);
 
         // set up text variables  
         p.textFont(redHat);
@@ -225,6 +212,16 @@ var t = function( p ) {
       p.background(bgcolor);
       let myTime = p.millis();
       
+      var rate = myTime%3;
+      //console.log(rate)
+      if (rate == 0 || rate == 1){
+          for (let i = 0; i < 100; i++) {
+            p.fill(1);
+            p.circle((p.random(p.windowWidth))-(p.windowWidth/2),(p.random(p.windowHeight))-(p.windowHeight/2),1,1);
+          }
+      }
+
+
       if (enterToggle == 0) { 
           p.wordFunction(myTime);
           } 
@@ -240,8 +237,12 @@ var t = function( p ) {
             // stop the draw loop
             formDiv.style.color = 'rgb(0,0,0)';
             formDiv.style.display = 'inline';
+            formDiv.style.top = '110px';
             p.fadeInAbout();
-            p.noLoop();
+            //p.delayTime(20);
+            //p.enterButton.
+            //p.noLoop();
+
           } 
       }
   

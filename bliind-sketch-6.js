@@ -1,9 +1,11 @@
+
+var s = function(p) { // p could be any variable name
 // preload font
 let inconsolata, redHat;
-function preload() {
+function p.preload(){
   inconsolata = loadFont('Inconsolata-Medium.ttf');
-  redHat = loadFont('RedHatMono-Light.ttf')
-}
+  redHat = loadFont('RedHatMono-Light.ttf');
+};
 
 // (not using this anymore)
 var mainGraphicDiv= document.getElementById('mainGraphicDiv');
@@ -13,12 +15,11 @@ var formDiv =  document.getElementById('contactFormDiv');
 
 // set canvas background
 var bgcolor;
-
 // set the letters or the word
 let myLetters = ['b','l','i','i','n','d','.','n','e','t'];
 
 // Set up the Canvas
-function setup() {
+function p.setup() {
 
   // create a button
   enterButton = createButton("Enter");
@@ -167,6 +168,6 @@ function drawCircle() {
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight)
 }
-
+}
 
 

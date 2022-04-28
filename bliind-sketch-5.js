@@ -1,5 +1,4 @@
 
-var s = function(p){
 // preload font
 let inconsolata, redHat;
 function preload() {
@@ -15,6 +14,10 @@ var formDiv =  document.getElementById('contactFormDiv');
 
 // set canvas background
 var bgcolor;
+
+var fade = 255;
+var fadeAmount = 1;
+
 
 // set the letters or the word
 let myLetters = ['b','l','i','i','n','d','.','n','e','t'];
