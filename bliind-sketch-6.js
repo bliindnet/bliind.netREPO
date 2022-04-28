@@ -1,5 +1,3 @@
-
-var s = function(p){
 // preload font
 let inconsolata, redHat;
 function preload() {
@@ -19,6 +17,69 @@ var bgcolor;
 // set the letters or the word
 let myLetters = ['b','l','i','i','n','d','.','n','e','t'];
 
+// Set up the Canvas
+function setup() {
+
+  // create a button
+  enterButton = createButton("Enter");
+  // but it inside the div
+  enterButton.parent("enterButtonDiv");
+  // set the position within the DIV
+  enterButton.position(0,0);
+  // give id to interact with CSS elements
+  enterButton.id("enter-button");
+  // when you press the mouse do thing
+  console.log(enterToggle);
+  enterButton.mouseReleased(clickState);
+ 
+  // create your canvas
+  myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
+
+  //myCanvas.position(0,0);
+  myCanvas.parent("mainGraphicDiv");
+ 
+  bgcolor = color (254,254,254);
+
+  // set up text variables  
+  textFont(redHat);
+  textSize(width / 15);
+  textAlign( CENTER);
+
+}
+
+// the draw function by default runs continuously every frame
+function draw() {
+    background(bgcolor);
+    let myTime = millis();
+    //let myTime = millis();wordfunc.loop();
+    //translate(width / 2, height / 2);
+
+    if (enterToggle == 0) { 
+        wordFunction(myTime);
+
+    } 
+    else if (enterToggle == 1)
+    {
+        let isitfade = wordFade(myTime);
+        console.log(isitfade);
+        if (isitfade == 0){
+          //bgcolor = color(random(255));
+          fadeOutButton();
+          //enterButton.style('display','none');
+          // stop the draw loop
+          formDiv.style.color = 'rgb(0,0,0)';
+          formDiv.style.display = 'inline';
+          fadeInAbout();
+          noLoop();
+
+          
+        }
+
+    }
+   
+}
+
+//// functions related to bliind sketch
 var posX;
 var posY;
 var posZ;
@@ -107,67 +168,5 @@ function windowResized(){
   resizeCanvas(windowWidth, windowHeight)
 }
 
-// Set up the Canvas
-function setup() {
 
-  // create a button
-  enterButton = createButton("Enter");
-  // but it inside the div
-  enterButton.parent("enterButtonDiv");
-  // set the position within the DIV
-  enterButton.position(0,0);
-  // give id to interact with CSS elements
-  enterButton.id("enter-button");
-  // when you press the mouse do thing
-  console.log(enterToggle);
-  enterButton.mouseReleased(clickState);
- 
-  // create your canvas
-  myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
-
-  //myCanvas.position(0,0);
-  myCanvas.parent("mainGraphicDiv");
- 
-  bgcolor = color (254,254,254);
-
-  // set up text variables  
-  textFont(redHat);
-  textSize(width / 15);
-  textAlign( CENTER);
-
-}
-
-// the draw function by default runs continuously every frame
-function draw() {
-    background(bgcolor);
-    let myTime = millis();
-    //let myTime = millis();wordfunc.loop();
-    //translate(width / 2, height / 2);
-
-    if (enterToggle == 0) { 
-        wordFunction(myTime);
-
-    } 
-    else if (enterToggle == 1)
-    {
-        let isitfade = wordFade(myTime);
-        console.log(isitfade);
-        if (isitfade == 0){
-          //bgcolor = color(random(255));
-          fadeOutButton();
-          //enterButton.style('display','none');
-          // stop the draw loop
-          formDiv.style.color = 'rgb(0,0,0)';
-          formDiv.style.display = 'inline';
-          fadeInAbout();
-          noLoop();
-
-          
-        }
-
-    }
-
-    
-   
-}
 

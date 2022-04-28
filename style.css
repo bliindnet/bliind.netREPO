@@ -4,14 +4,14 @@
 }
 
 html, body {
-  margin: 1;
-  padding: 1;
+  margin: 0;
+  padding: 0;
   background-color: rgb(254, 254, 254);
   
 }
 
 canvas {
-  display: block; 
+  /*display: block; */
 }
 
 p.about{
@@ -63,14 +63,31 @@ textarea{
   box-shadow: 50px 50px #fdd6f8;
   transform: translateY(10px);
 }
+/* --------------------- Title Graphic Div Background -----------------------------*/
+
+#titleGraphicDiv{
+  /* width and height will only matter if something
+    coming after it */
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    /* move to background*/
+    z-index: -1;
+  }
 
 
 
-/* --------------------- Title Div -----------------------------*/
-#titleDiv{
-  position:relative;
+/* --------------------- Title Words -----------------------------*/
+#titleWords{
+  position:absolute;
   z-index: 20;
+  top: -10px;
+  left: 10px;
+  width: 100%;
+  height: 50px;
   font-family: myRedHat;
+  /*background-color: rgba(136, 179, 207, 0.527);*/
+  
 }
 
 
@@ -79,8 +96,9 @@ textarea{
 #enterButtonDiv{
   width: 1px;
   height: 1px;
+  top: 50px;
   margin: 0;
-  position:relative;
+  position:absolute;
   z-index: 20;
 }
 
@@ -113,18 +131,20 @@ textarea{
   display: none;
 }
 
+  
+
 /* --------------------- Main Graphic Background -----------------------------*/
 
 #mainGraphicDiv{
 /* width and height will only matter if something
   coming after it */
-  width: 10px;
+  width: 100%;
   height: 10px;
-  top:0px;
+  top:5px;
   left: 0px;
   position: absolute;
   /* move to background*/
-  z-index: -1;
+  z-index: -10;
 }
 
 #main-graphic.fade{
@@ -140,6 +160,8 @@ textarea{
     coming after it */
     width: 40%;
     float: right; 
+    top: 50px;
+    position: relative;
     color: rgb(254,254,254);
     transition-duration: 0.9s;
    
