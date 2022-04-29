@@ -137,7 +137,7 @@ var t = function( p ) {
     var speedy = 0.1;
     p.setup = function() {
       p.createCanvas(p.windowWidth, 50);
-      console.log(3%2)
+      //console.log(3%2)
       //p.background(254,251,251);
 
       
@@ -229,7 +229,7 @@ var t = function( p ) {
       else if (enterToggle == 1)
       {
           let isitfade = p.wordFade(myTime);
-          console.log(isitfade);
+          //console.log(isitfade);
           if (isitfade == 0){
             //bgcolor = color(random(255));
             p.fadeOutButton();
@@ -271,7 +271,7 @@ var t = function( p ) {
             p.rotateY(time/8000);
             p.rotateZ(time/4000);
             p.fill(letCol,letCol,letCol);
-            console.log(letCol);
+            //console.log(letCol);
             word = p.text(myLetters[i], (i + 130)* i/4, (i + 1)*i/4);
         }
         if (letCol < 255){
@@ -285,7 +285,8 @@ var t = function( p ) {
     p.fadeOutButton = function() {
         //fade = 100;
         // because transition time is set in CSS you dont need fade here
-        enterButton.style('color', 'rgb(254, 254, 254)');
+        enterButton.style('color', 'rgb(254, 250, 250)');
+        enterButton.style('display', 'none');
       }
     // fade in about
     p.fadeInAbout = function() {
